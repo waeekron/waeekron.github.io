@@ -1,4 +1,4 @@
- HEAD
+
 class PopUpFrom extends HTMLElement {
 
     date = undefined;
@@ -363,7 +363,6 @@ function loadFilteredPosts(filteredItems) {
         document.body.querySelector(".questions").appendChild(div);
     })
 }
-
 
 
 
