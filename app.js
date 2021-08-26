@@ -118,7 +118,7 @@ class PopUpFrom extends HTMLElement {
 
         let meta = document.createElement("meta");
         meta.setAttribute("name","viewport");
-        meta.setAttribute("content","width=device-width, initial-scale=1, user-scalable=no");
+        meta.setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
 
         // Append everything
         left.appendChild(label);
