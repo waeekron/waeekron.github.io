@@ -1,4 +1,3 @@
-
 class PopUpFrom extends HTMLElement {
 
     date = undefined;
