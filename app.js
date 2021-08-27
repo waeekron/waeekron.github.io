@@ -49,6 +49,7 @@ class PopUpFrom extends HTMLElement {
 
 
     render() {
+        this.category = "HTML"
         this.date = new Date().toString();
         this.shadowRoot.querySelector(".button").remove();
 
