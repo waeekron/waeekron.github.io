@@ -1,0 +1,84 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 10%;
+    color:#66FCF1;
+    font-size: 100px;
+}
+
+p {
+    background-color:#1F2833 ;
+    padding: 1% 0;
+    margin: 0%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    border-bottom: 1px solid #45A29E;
+    
+}
+
+p:hover {
+    background-color: #45A29E;
+}
+
+button {
+    color: black;
+    padding: 15px 32px;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 1%;
+}
+
+button:hover {
+    background-color:#66FCF1;
+}
+
+input {
+    padding: 15px 32px;
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+#top {
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    text-align: center;
+    display: block;
+    color: #45A29E;
+    font-size: 25px;
+    margin-bottom: 5%;
+}
+
+#deleted {
+    border: #45A29E;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+#notations {
+    border: #45A29E;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+footer {
+    margin-top: 25%;
+}
+
+body {
+    background-color: #1F2833;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
