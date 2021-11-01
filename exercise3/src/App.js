@@ -1,9 +1,10 @@
+
+   
 import React, {useState, useEffect} from 'react'
 import Ledscreen from './Ledscreen.js'
 import Form from './Form.js'
 import Palet from './Palet.js'
-import Display from './Display.js'
-import {getDatabase, ref, set, onValue,child,get} from 'firebase/database'
+import {ref, set, onValue} from 'firebase/database'
 
 
 
@@ -31,7 +32,6 @@ function App(props) {
     }
     
     const initCoordinates = () => {
-      console.log(document.getElementById('panel'))
       const list = []
       for(let i = 0; i < 8; i++) {
         list[i] = new Array(8)
@@ -55,9 +55,8 @@ function App(props) {
   
 
   const handleClick = (e) => {
-    console.log(e.clientX,e.clientY)
     let index = matchIndex(e.clientX - offset.offsetX, e.clientY - offset.offsetY)
-    console.log(index)
+    
     if(index === null) return
     panels.forEach(panel => {
       if(panel.id === index) {
@@ -86,34 +85,21 @@ function App(props) {
     setCoordinates(initCoordinates)
   }
 
-  const convert = (data) => {
-    return 1
-  }
-
   const[offset, setOffset] = useState({offsetX:0, offsetY:0})
 
   useEffect(() => {
     document.body.onresize = changeSize
-    console.log(document.getElementById('panel').getBoundingClientRect())
+    
     setOffset(
       {
         offsetX: document.getElementById('panel').getBoundingClientRect().left,
         offsetY: document.getElementById('panel').getBoundingClientRect().top
     }
       )
-    /*get(child(props.database, 'emojit')).then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-      console.error(error);
-    });*/
+    
     const starCountRef = ref(props.database, 'emojit')
     onValue(starCountRef, (snapshot) => {
     const data = snapshot.val();
-    console.log(Object.values(data))
     setEmojis(Object.values(data))
   });
   },[])
@@ -127,24 +113,25 @@ function App(props) {
 
   const colorHandler = () => {
     setColor(document.getElementById('colorInput').value)
-    console.log(document.getElementById('colorInput').value)
   }
 
   const postData = () => {
+    if(name === '') {
+      alert('You need to give a name!')
+      return
+    }
     const db = props.database
     set(ref(db, 'emojit/' + name), {
       name:name,
       panels:panels,
       date: new Date().toString()
     })
-    console.log('data send to database') 
-
+    
     clearHandler()
   }
 
   const nameListener = (e) => {
     setName(e.target.value)
-    console.log(e.target.value)
   }
 
   return (
