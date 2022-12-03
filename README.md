@@ -1,6 +1,12 @@
 # waeekron.github.io
-Harjoitustehtävät De Vaja academyyn. 
+De Vaja academy solutions
 
-Harjoitukset ja 1 ja 2 on toteutettu html, css ja javascriptillä. Ne ovat hostattuna github-pagesin kautta.
+### Exercise 1
+HTML, CSS, JS
 
-Harjoituksessa 3 käytin Reactia ja Firebasea. Sovellus on firebasen palvelimella ja käyttää firebasen realtime databasea. 
+### Exercise 2
+Web components
+
+### Exercise 3
+React
+Firebase
