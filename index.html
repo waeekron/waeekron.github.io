@@ -1,34 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="landingpage.css">
-    <title>Exercises</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Vite + TS</title>
+    <script type="module" crossorigin src="/assets/index-69516efe.js"></script>
+    <link rel="stylesheet" href="/assets/index-6e6260fa.css">
+  </head>
 
-    <header>
-        <h1>TRAINEE PROGRAM EXERCISES</h1>
-    </header>
+  <body class="bg-slate-100 font-mono text-gray-900">
+    <div class="flex min-h-full w-10/12 lg:w-full">
+      <aside
+        class="max-w-1/6 hidden min-h-full w-60 flex-col-reverse border-r-2 border-gray-900 md:flex"
+      >
+        <!-- <div class="flex flex-col gap-2 mb-4">
 
-    <main>
-        <div class="container">
-                <p><a href="exercise_1/index.html">Exercise 1</a></p>
-        </div>
-        <div class="container">
-            <p><a href="exercise_2/index.html">Exercise 2</a></p>
-        </div>
-        <div class="container">
-            <p><a href="https://devaja-exercises.web.app/?">Exercise 3</a></p>
-        </div>
+        <h2 class="ml-1 text-xl font-bold">Find me on</h2>
+        <a class="ml-1 tracking-wider text-blue-600 text-lg font-medium" href="">Github</a>
+        <a class="ml-1 tracking-wider text-blue-600 text-lg font-medium" href="">Linkedin</a>
+      </div> -->
+      </aside>
+      <div
+        class="flex min-h-screen w-screen flex-grow flex-col justify-between"
+      >
+        <main class="mx-auto flex w-screen flex-col gap-16 md:w-10/12">
+          <section class="mx-2 mb-6 mt-24 lg:w-8/12">
+            <h1
+              id="hello"
+              class="mb-5 h-[72px] min-h-[72px] w-fit bg-transparent text-7xl"
+            ></h1>
 
-    </main>
+            <p class="mt-24 text-2xl leading-10">
+              I'm Walter, a
+              <span
+                class="underline decoration-yellow-400 decoration-4 underline-offset-8"
+                >software engineer</span
+              >
+              and a
+              <span
+                class="underline decoration-blue-400 decoration-4 underline-offset-8"
+                >computer science student.</span
+              >
+            </p>
+          </section>
+          <section class="my-auto px-3">
+            <h2 class="text-3xl">About me</h2>
+            <p class="mt-3 text-lg font-medium">
+              I like to program, learn, build things with code, bike & spend
+              time in nature:)
+            </p>
+          </section>
+          <section class="my-auto mb-4 px-3">
+            <h2 class="text-3xl">Find me on</h2>
 
-    <footer> 
-        <span><a href="https://github.com/waeekron/waeekron.github.io"><img src="./resources/GitHub-Mark-32px.png" /> </a></span>
-        <span>Made by Walter Kronqvist </span>
-    </footer>
-</head>
-<body>
+            <div class="mt-3 flex flex-col gap-2">
+              <a
+                class="ml-1 text-lg font-semibold tracking-wider text-blue-600"
+                href="https://github.com/waeekron"
+                target="_blank"
+                >Github</a
+              >
+              <a
+                class="ml-1 text-lg font-semibold tracking-wider text-blue-600"
+                href="https://www.linkedin.com/in/walter-k-079262256/"
+                target="_blank"
+                >Linkedin</a
+              >
+            </div>
+          </section>
+          <footer class="flex h-[100px] flex-col-reverse text-center">
+            Made by waeekron
+          </footer>
+        </main>
+      </div>
+    </div>
+
     
-</body>
+    <script defer>
+      function sleep(ms) {
+        document.getElementById("hello").innerText += "\u{1F44B}";
+        return new Promise((r) => setTimeout(r, ms));
+      }
+
+      const text = ["Hei!", "Hello!", "Hé!", "Ciao!"];
+      let backspace = false;
+      let j = 0;
+      let i = 0;
+      let current = text[j];
+      let changeWord = false;
+
+      async function type() {
+        if (changeWord) {
+          changeWord = !changeWord;
+          if (j === text.length - 1) {
+            j = 0;
+          } else {
+            j++;
+          }
+          current = text[j];
+        }
+        if (i >= current.length) await sleep(7000);
+
+        if (!backspace) {
+          document.getElementById("hello").innerText = current.substring(
+            0,
+            i++,
+          );
+        }
+
+        if (backspace) {
+          document.getElementById("hello").innerText = current.substring(
+            0,
+            --i,
+          );
+        }
+
+        if (backspace && i <= 0) {
+          changeWord = !changeWord;
+        }
+
+        if (i <= 0 || i >= current.length) {
+          backspace = !backspace;
+        }
+
+        setTimeout(type, !backspace ? 200 : 50);
+      }
+      type();
+    </script>
+  </body>
 </html>
