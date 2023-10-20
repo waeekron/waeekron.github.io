@@ -1,135 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <title>Vite + TS</title>
-    <script type="module" crossorigin src="/assets/index-69516efe.js"></script>
-    <link rel="stylesheet" href="/assets/index-6e6260fa.css">
-  </head>
+    <title>waeekron</title>
+  <script type="module" crossorigin src="/assets/index-d1598ab9.js"></script>
+  <link rel="stylesheet" href="/assets/index-fbe72878.css">
+</head>
 
-  <body class="bg-slate-100 font-mono text-gray-900">
-    <div class="flex min-h-full w-10/12 lg:w-full">
-      <aside
-        class="max-w-1/6 hidden min-h-full w-60 flex-col-reverse border-r-2 border-gray-900 md:flex"
-      >
-        <!-- <div class="flex flex-col gap-2 mb-4">
+<body class="font-mono text-gray-900">
+<div class="bg-bg  h-full min-h-full">
+    <div
+        class="flex  w-full flex-grow flex-col justify-between"
+    >
 
-        <h2 class="ml-1 text-xl font-bold">Find me on</h2>
-        <a class="ml-1 tracking-wider text-blue-600 text-lg font-medium" href="">Github</a>
-        <a class="ml-1 tracking-wider text-blue-600 text-lg font-medium" href="">Linkedin</a>
-      </div> -->
-      </aside>
-      <div
-        class="flex min-h-screen w-screen flex-grow flex-col justify-between"
-      >
-        <main class="mx-auto flex w-screen flex-col gap-16 md:w-10/12">
-          <section class="mx-2 mb-6 mt-24 lg:w-8/12">
-            <h1
-              id="hello"
-              class="mb-5 h-[72px] min-h-[72px] w-fit bg-transparent text-7xl"
-            ></h1>
+        <main class="mx-auto flex w-screen  flex-col gap-16 md:w-10/12">
+            <section class="mx-2 mt-40 pt-2 min-h-screen text-center md:text-left mb-6 lg:mt-80 max-w-[700px] lg:w-8/12">
+                <h1
+                    aria-description="Welcome text saying hello in different languages"
+                    id="hello"
+                    class="text-center md:text-left mb-5 h-[72px] min-h-[72px] bg-transparent text-7xl"
+                ></h1>
 
-            <p class="mt-24 text-2xl leading-10">
-              I'm Walter, a
-              <span
-                class="underline decoration-yellow-400 decoration-4 underline-offset-8"
-                >software engineer</span
-              >
-              and a
-              <span
-                class="underline decoration-blue-400 decoration-4 underline-offset-8"
-                >computer science student.</span
-              >
-            </p>
-          </section>
-          <section class="my-auto px-3">
-            <h2 class="text-3xl">About me</h2>
-            <p class="mt-3 text-lg font-medium">
-              I like to program, learn, build things with code, bike & spend
-              time in nature:)
-            </p>
-          </section>
-          <section class="my-auto mb-4 px-3">
-            <h2 class="text-3xl">Find me on</h2>
+                    <p class="mt-24 pt-1 text-2xl leading-10 fade-in-animation-1">
+                        My name is <b>Walter</b>,</br>
+                    I'm a <b>software engineer</b> &
+                    <b>computer science student<span class="text-fill text-4xl h-[.2em] border-[1px] border-gray-900 w-[.2em] ml-1 rounded-full bg-transparent inline-block"> </span></b>
+                </p>
+                <div class="mt-16 fade-in-animation-2 text-slate-500 font-extralight uppercase bounce">scroll down</div>
+            </section>
+            <section class="px-3">
+                <h2 class="text-3xl mb-10 lg:text-4xl font-bold">About me</h2>
+                <p class="text-lg lg:text-xl font-medium">
+                    I like to program, learn, build things with code, bike & spend
+                    time in nature:)
+                </p>
+            </section>
+            <section class="my-auto mt-8 mb-4 px-3">
+                <h2 class="text-3xl lg:text-4xl font-bold">Find me on</h2>
 
-            <div class="mt-3 flex flex-col gap-2">
-              <a
-                class="ml-1 text-lg font-semibold tracking-wider text-blue-600"
-                href="https://github.com/waeekron"
-                target="_blank"
-                >Github</a
-              >
-              <a
-                class="ml-1 text-lg font-semibold tracking-wider text-blue-600"
-                href="https://www.linkedin.com/in/walter-k-079262256/"
-                target="_blank"
-                >Linkedin</a
-              >
-            </div>
-          </section>
-          <footer class="flex h-[100px] flex-col-reverse text-center">
-            Made by waeekron
-          </footer>
+                <div class="mt-8 flex flex-col gap-2 ">
+                    <a
+                        class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
+                        href="https://github.com/waeekron"
+                        target="_blank"
+                    >Github</a
+                    >
+                    <a
+                        class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
+                        href="https://www.linkedin.com/in/walter-k-079262256/"
+                        target="_blank"
+                    >Linkedin</a
+                    >
+                </div>
+            </section>
+
         </main>
-      </div>
+        <footer class="flex uppercase text-slate-500 h-[100px] mt-64 py-2 flex-col-reverse text-center">
+            Made by waeekron
+        </footer>
     </div>
+</div>
 
-    
-    <script defer>
-      function sleep(ms) {
-        document.getElementById("hello").innerText += "\u{1F44B}";
-        return new Promise((r) => setTimeout(r, ms));
-      }
 
-      const text = ["Hei!", "Hello!", "Hé!", "Ciao!"];
-      let backspace = false;
-      let j = 0;
-      let i = 0;
-      let current = text[j];
-      let changeWord = false;
 
-      async function type() {
-        if (changeWord) {
-          changeWord = !changeWord;
-          if (j === text.length - 1) {
-            j = 0;
-          } else {
-            j++;
-          }
-          current = text[j];
-        }
-        if (i >= current.length) await sleep(7000);
-
-        if (!backspace) {
-          document.getElementById("hello").innerText = current.substring(
-            0,
-            i++,
-          );
-        }
-
-        if (backspace) {
-          document.getElementById("hello").innerText = current.substring(
-            0,
-            --i,
-          );
-        }
-
-        if (backspace && i <= 0) {
-          changeWord = !changeWord;
-        }
-
-        if (i <= 0 || i >= current.length) {
-          backspace = !backspace;
-        }
-
-        setTimeout(type, !backspace ? 200 : 50);
-      }
-      type();
-    </script>
-  </body>
+</body>
 </html>
