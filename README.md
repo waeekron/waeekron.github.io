@@ -1,5 +1,5 @@
 # waeekron.github.io
-De Vaja academy solutions
+De Vaja academy solutions & and my homepage :)
 
 ### Exercise 1 - Typing game
 HTML, CSS, JS
