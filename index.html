@@ -7,8 +7,8 @@
         content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <title>waeekron</title>
-  <script type="module" crossorigin src="/assets/index-d1598ab9.js"></script>
-  <link rel="stylesheet" href="/assets/index-fbe72878.css">
+  <script type="module" crossorigin src="/assets/index-f21b1340.js"></script>
+  <link rel="stylesheet" href="/assets/index-a2d2e10e.css">
 </head>
 
 <body class="font-mono text-gray-900">
@@ -17,8 +17,8 @@
         class="flex  w-full flex-grow flex-col justify-between"
     >
 
-        <main class="mx-auto flex w-screen  flex-col gap-16 md:w-10/12">
-            <section class="mx-2 mt-40 pt-2 min-h-screen text-center md:text-left mb-6 lg:mt-80 max-w-[700px] lg:w-8/12">
+        <main class="mx-auto flex w-screen flex-col  gap-16 md:w-10/12">
+            <section class="mx-2 mt-40 pt-2 min-h-screen md:min-h-0 text-center md:text-left mb-6  max-w-[700px] lg:w-8/12">
                 <h1
                     aria-description="Welcome text saying hello in different languages"
                     id="hello"
@@ -30,33 +30,63 @@
                     I'm a <b>software engineer</b> &
                     <b>computer science student<span class="text-fill text-4xl h-[.2em] border-[1px] border-gray-900 w-[.2em] ml-1 rounded-full bg-transparent inline-block"> </span></b>
                 </p>
-                <div class="mt-16 fade-in-animation-2 text-slate-500 font-extralight uppercase bounce">scroll down</div>
+                <div class="md:hidden mt-16 fade-in-animation-2 text-slate-500 font-extralight uppercase bounce">scroll down</div>
+
+
             </section>
-            <section class="px-3">
+            <div class="  pt-2 fade-in-animation-1">
+            <section class="px-3 text-lg lg:text-xl font-medium">
                 <h2 class="text-3xl mb-10 lg:text-4xl font-bold">About me</h2>
-                <p class="text-lg lg:text-xl font-medium">
+                <p class="mb-4 text-xl">
                     I like to program, learn, build things with code, bike & spend
                     time in nature:)
                 </p>
+                <p class="text-xl">
+                    Currently, I'm finishing my bachelor's degree and looking for opportunities in software development.
+                </p>
+            </section>
+            <section class=" my-auto mt-8 px-3 text-lg lg:text-xl font-medium">
+                <h2 class="text-3xl mb-10 lg:text-4xl font-bold">Skills</h2>
+<div class="flex gap-12">
+    <ul class="text-xl">
+        <li>Typescript</li>
+        <li>Go</li>
+        <li>Java</li>
+        <li>Node.js</li>
+        <li>React</li>
+        <li>Cypress</li>
+
+    </ul>
+    <ul class="text-xl">
+        <li>HTML/CSS</li>
+        <li>Tailwind</li>
+        <li>SQL</li>
+        <li>GraphQL</li>
+        <li>MongoDB</li>
+    </ul>
+</div>
+
             </section>
             <section class="my-auto mt-8 mb-4 px-3">
                 <h2 class="text-3xl lg:text-4xl font-bold">Find me on</h2>
 
                 <div class="mt-8 flex flex-col gap-2 ">
                     <a
-                        class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
-                        href="https://github.com/waeekron"
-                        target="_blank"
+                            class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
+                            href="https://github.com/waeekron"
+                            target="_blank"
                     >Github</a
                     >
                     <a
-                        class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
-                        href="https://www.linkedin.com/in/walter-k-079262256/"
-                        target="_blank"
+                            class="text-line ml-1 text-lg lg:text-xl font-semibold tracking-wider hover:tracking-widest transition-all  w-fit"
+                            href="https://www.linkedin.com/in/walter-k-079262256/"
+                            target="_blank"
                     >Linkedin</a
                     >
                 </div>
             </section>
+        </div>
+
 
         </main>
         <footer class="flex uppercase text-slate-500 h-[100px] mt-64 py-2 flex-col-reverse text-center">
